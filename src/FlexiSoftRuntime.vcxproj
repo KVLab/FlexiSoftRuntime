@@ -64,7 +64,13 @@
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>call "$(SolutionDir)build_tools\post_build_runtime.bat" "$(SolutionDir)" "$(OutDir)" "$(TargetPath)" "$(Configuration)"</Command>
+      <Command>if exist "$(SolutionDir)build_tools\post_build_runtime.bat" (
+          call "$(SolutionDir)build_tools\post_build_runtime.bat" "$(SolutionDir)" "$(OutDir)" "$(TargetPath)" "$(Configuration)"
+        ) else (
+          echo [FlexiSoftRuntime] WARNING: post_build_runtime.bat not found - skipping post-build.
+        )
+        exit /b 0
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -83,7 +89,13 @@
       <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>call "$(SolutionDir)build_tools\post_build_runtime.bat" "$(SolutionDir)" "$(OutDir)" "$(TargetPath)" "$(Configuration)"</Command>
+      <Command>if exist "$(SolutionDir)build_tools\post_build_runtime.bat" (
+          call "$(SolutionDir)build_tools\post_build_runtime.bat" "$(SolutionDir)" "$(OutDir)" "$(TargetPath)" "$(Configuration)"
+        ) else (
+          echo [FlexiSoftRuntime] WARNING: post_build_runtime.bat not found - skipping post-build.
+        )
+        exit /b 0
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
