@@ -43,8 +43,6 @@ KVLab — Vladimír Kopal
 
 ## License
 
- ## License
-
 FlexiSoft Runtime source code and documentation are licensed under the [MIT License](LICENSE).
 
 The bundled `NotoSans-Regular.ttf` font is distributed under the SIL Open Font License 1.1; see `fonts/LICENSE-NotoSans-OFL.txt`.
