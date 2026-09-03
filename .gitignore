@@ -1,0 +1,65 @@
+# Visual Studio / user-local files
+.vs/
+.vscode/
+*.user
+*.vcxproj.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.aps
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+Win32/
+ipch/
+
+# Build output directories accidentally created under src
+src/[Dd]ebug/
+src/[Rr]elease/
+src/x64/
+src/Win32/
+
+# C/C++ build artifacts
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
+*.log
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Packages / archives / VM transfer
+*.zip
+*.7z
+*.rar
+*.iso
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+Thumbs.db
+Desktop.ini
+
+# Local distribution and staging folders
+dist/
+release/
+*_Release/
+installer_stage/
+
+# Local project planning / working notes
+/todo.md
+/next.md
+/next2.md
+/next3.md

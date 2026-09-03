@@ -1,0 +1,162 @@
+{
+  "language": "cz",
+  "transport": "network",
+  "serial": {
+    "port": "COM5",
+    "baud": 115200,
+    "data_bits": 8,
+    "parity": "N",
+    "stop_bits": 1,
+    "timeout_ms": 2500
+  },
+  "network": {
+    "mode": "tcp_client",
+    "host": "192.168.0.7",
+    "port": 4001,
+    "bind_host": "0.0.0.0",
+    "bind_port": 0,
+    "connect_timeout_ms": 3000,
+    "timeout_ms": 1500
+  },
+  "rk512": {
+    "device_local": "0x4F",
+    "device_reply": "0x4D",
+    "token_hex": "0F 0F 46 4C 58 54 30 31"
+  },
+  "poll": {
+    "period_ms": 1000,
+    "read_block": "0x76",
+    "read_size": 54
+  },
+  "inputs": [
+    {
+      "enabled": true,
+      "name": "CH1",
+      "status_byte": 0,
+      "on_bit": 0,
+      "ok_bit": 1,
+      "alert_text_en": "CH1 reports an error",
+      "alert_text_cz": "CH1 hlásí chybu",
+      "alert_text_uk": "CH1 повідомляє про помилку",
+      "alert_text_fr": "CH1 signale une erreur",
+      "alert_text_de": "CH1 meldet einen Fehler",
+      "output": {
+        "block": "0x42",
+        "byte": 0,
+        "bit": 0,
+        "pulse_ms": 1000
+      },
+      "repeat_fault": {
+        "count": 3,
+        "window_ms": 30000,
+        "ignore_after_command_ms": 1500,
+        "text_en": "Check proper closing of the left guard door",
+        "text_cz": "Zkontroluj správné dovření krytu u levých dveří",
+        "text_uk": "Перевірте правильне закриття лівих захисних дверцят",
+        "text_fr": "Vérifiez la bonne fermeture de la porte de protection gauche",
+        "text_de": "Prüfen Sie, ob die linke Schutztür richtig geschlossen ist"
+      }
+    },
+    {
+      "enabled": true,
+      "name": "CH2",
+      "status_byte": 0,
+      "on_bit": 2,
+      "ok_bit": 3,
+      "alert_text_en": "CH2 reports an error",
+      "alert_text_cz": "CH2 hlásí chybu",
+      "alert_text_uk": "CH2 повідомляє про помилку",
+      "alert_text_fr": "CH2 signale une erreur",
+      "alert_text_de": "CH2 meldet einen Fehler",
+      "output": {
+        "block": "0x42",
+        "byte": 0,
+        "bit": 1,
+        "pulse_ms": 1000
+      },
+      "repeat_fault": {
+        "count": 3,
+        "window_ms": 30000,
+        "ignore_after_command_ms": 4000,
+        "text_en": "Check proper closing of the left guard door",
+        "text_cz": "Zkontroluj správné dovření krytu u pravých dveří",
+        "text_uk": "Перевірте правильне закриття лівих захисних дверцят",
+        "text_fr": "Vérifiez la bonne fermeture de la porte de protection gauche",
+        "text_de": "Prüfen Sie, ob die linke Schutztür richtig geschlossen ist"
+      }
+    },
+    {
+      "enabled": false,
+      "name": "CH3",
+      "status_byte": 0,
+      "on_bit": 4,
+      "ok_bit": 5,
+      "alert_text_en": "CH3 reports an error",
+      "alert_text_cz": "CH3 hlásí chybu",
+      "alert_text_uk": "CH3 повідомляє про помилку",
+      "alert_text_fr": "CH3 signale une erreur",
+      "alert_text_de": "CH3 meldet einen Fehler",
+      "output": {
+        "block": "0x42",
+        "byte": 0,
+        "bit": 2,
+        "pulse_ms": 1000
+      },
+      "repeat_fault": {
+        "count": 3,
+        "window_ms": 30000,
+        "ignore_after_command_ms": 1500,
+        "text_en": "Check proper closing of the left guard door",
+        "text_cz": "Zkontroluj správné dovření krytu u levých dveří",
+        "text_uk": "Перевірте правильне закриття лівих захисних дверцят",
+        "text_fr": "Vérifiez la bonne fermeture de la porte de protection gauche",
+        "text_de": "Prüfen Sie, ob die linke Schutztür richtig geschlossen ist"
+      }
+    },
+    {
+      "enabled": false,
+      "name": "CH4",
+      "status_byte": 0,
+      "on_bit": 6,
+      "ok_bit": 7,
+      "alert_text_en": "CH4 reports an error",
+      "alert_text_cz": "CH4 hlásí chybu",
+      "alert_text_uk": "CH4 повідомляє про помилку",
+      "alert_text_fr": "CH4 signale une erreur",
+      "alert_text_de": "CH4 meldet einen Fehler",
+      "output": {
+        "block": "0x42",
+        "byte": 0,
+        "bit": 3,
+        "pulse_ms": 1000
+      },
+      "repeat_fault": {
+        "count": 3,
+        "window_ms": 30000,
+        "ignore_after_command_ms": 1500,
+        "text_en": "Check proper closing of the left guard door",
+        "text_cz": "Zkontroluj správné dovření krytu u levých dveří",
+        "text_uk": "Перевірте правильне закриття лівих захисних дверцят",
+        "text_fr": "Vérifiez la bonne fermeture de la porte de protection gauche",
+        "text_de": "Prüfen Sie, ob die linke Schutztür richtig geschlossen ist"
+      }
+    }
+  ],
+  "ui": {
+    "tray_tooltip": "FlexiSoft RS232 Runtime",
+    "tray_tooltip_en": "FlexiSoft RS232 Runtime",
+    "tray_tooltip_cz": "FlexiSoft RS232 Runtime",
+    "tray_tooltip_uk": "FlexiSoft RS232 Runtime",
+    "tray_tooltip_fr": "FlexiSoft RS232 Runtime",
+    "tray_tooltip_de": "FlexiSoft RS232 Runtime"
+  },
+  "logging": {
+    "enabled": true,
+    "file": "flexi_runtime.log",
+    "newest_first": true,
+    "max_bytes": 65536
+  },
+  "debug": {
+    "force_command_fail": false
+  }
+}
